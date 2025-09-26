@@ -56,9 +56,14 @@ int main() {
   
     densiPopulacional = (double)populacao1 / area1;
     pibPerCapita = (pib1 * 1000000000) / populacao1;  
+    double inverso1 = 1.0/densiPopulacional;
+    double superPoder1 = populacao1 + pontos_turisticos1 + area1 + pib1 + inverso1 + pibPerCapita;
+
 
     densiPopulacional2 = (double)populacao2 / area2;
     pibPerCapita2 = (pib2 * 1000000000) / populacao2;  
+    double inverso2 = 1.0/densiPopulacional2;
+    double superPoder2 = populacao2 + pontos_turisticos2 + area2 + pib2 + densiPopulacional2 + pibPerCapita2;
 
     printf("\n--- Informacoes coletadas ---\n");
     printf("Carta 1: \n");
@@ -84,6 +89,51 @@ int main() {
     printf("Pontos Turisticos: %d\n", pontos_turisticos2);
     printf("Densidade Populacional: %.2f hab/km²\n", densiPopulacional2);
     printf("PIB per Capita: R$ %.2f\n", pibPerCapita2);
+
+
+    printf("----------------------------------------------------------------------");
     
+  if(populacao1 > populacao2){
+      printf("População: Carta 1 venceu!!\n");
+  }else {
+    printf("População: Carta 2 venceu!!\n");
+  }
+
+    if(area1 > area2){
+      printf("Area:  Carta 1 venceu!!\n");
+  }else {
+    printf("Area: Carta 2 venceu!!\n");
+  }
+
+    if(pib1 > pib2){
+      printf("PIB: Carta 1 venceu!!\n");
+  }else {
+    printf("PIB: Carta 2 venceu!!\n");
+  }
+
+    if(pontos_turisticos1 > pontos_turisticos2){
+      printf("Pontos Turisticos:  Carta 1 venceu!!\n");
+  }else {
+    printf("Pontos Turisticos:  Carta 2 venceu!!\n");
+  }
+
+    if(densiPopulacional < densiPopulacional2){
+      printf("Densidade: Carta 1 venceu!!\n");
+  }else {
+    printf("Densidade: Carta 2 venceu!!\n");
+  }
+
+    if(pibPerCapita > pibPerCapita2){
+      printf("PIB per Capita: Carta 1 venceu!!\n");
+  }else {
+    printf("PIB per Capita: Carta 2 venceu!!\n");
+  }
+
+    if(superPoder1 > superPoder2){
+      printf("Super Poder: Carta 1 venceu!!\n");
+  }else {
+    printf("Super Poder: Carta 2 venceu!!\n");
+  }
+
     return 0;
 }
